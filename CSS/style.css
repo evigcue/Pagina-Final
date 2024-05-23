@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1vw 1vh; /* vw -> viewport wide, vh -> viewport height */
+}
+
+/* Opcion 2 paleta de colores: #0C0C0C, #9B3922, #F2613F y #EEEEEE. Para sombreado: #481E14 */
+
+body{
+    background-attachment: fixed;
+    background: #393E46;
+    font-size: 1.4rem;
+}
+
+/*Ajustes para el header*/
+
+header{
+    font-size: 2.4rem;
+    text-shadow: 0.2rem 0.15rem 0.1rem #9B3922;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+
+    nav ul{
+        text-transform: none;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: -1rem;
+        text-shadow: 0.15rem 0.1rem 0.2rem #9B3922;
+        list-style-type: none;
+        display: inline-flex;
+        /*Los ajustes comentados son para el menú de navegación para móvil*/
+        /*position: absolute;
+        display: none;*/
+    }
+
+    img{
+        display: inline;
+        text-align: right;
+        width: 4rem;
+    }
+
+    a{
+        color: #ba7b0d;
+    }
+}
+
+.panel{
+    background-color: rgba(255, 255, 255, 0.23);
+    border-radius: 0.5vw;
+    border: solid 0.1rem black;
+    box-shadow: black 0.3rem 0.2rem 0.8rem, inset 0px 0px 10px #222831;
+    /* margin-bottom: 3vh; */
+}
+
+/*Tabla*/
+
+table{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+table, td, tr{
+    background-color: lightgray;
+    border: black solid;
+    border-collapse: collapse;
+}
+
+/* Ajustes para noticias*/
+
+ul.noticieros{
+    margin-left: 2rem;
+}
+
+img.noticia{
+    width: 50%;
+}
+/* Ajustes para formularios */
+
+form{
+    width: 100%;
+}
+
+label{
+    font-weight: bolder;
+}
+
+#enviar{
+    text-align: center;
+    width: 20%;
+    margin-top: 2vh;
+}
+
+input, select, textarea{
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1vh;
+}
+
+/**/
+
+a{
+    text-decoration: none;
+}
+
+article{
+    margin-left: 1rem;
+    display: inline-block;
+    
+}
+
+ul, ul a{
+    text-transform: none;
+    margin-top: -1.5rem;
+    text-shadow: 0.15rem 0.1rem 0.2rem #9B3922;
+    list-style-type: none;
+    color: #ba7b0d;
+}
+
+/*Ajustes para la galería y los géneros*/
+
+img{
+    width: 10rem;
+}
+
+img.icono{
+    width: 3rem;
+}
+
+ul.generos{
+    font-size: 2.5rem;
+    margin-bottom: -2rem;
+
+    li{
+        display: inline-flex;
+    }
+}
+
+.carrusel{
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    width: 100%;
+    max-width: 120em;
+
+    img{
+        scroll-snap-align: center;
+        flex: 0 0 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/**/
+
+.mapa{
+    border: 0;
+    width: 50vw;
+    height: 45vh;
+}
+
+/* Ajustes para el footer */
+
+footer{
+    margin-top: 2rem;
+}
+
+/**/
+
+@media screen and (max-width: 850px) {
+    ul.generos{
+        margin-bottom: -1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul.generos li{
+        margin-bottom: 2rem;
+    }
+
+    .panel{
+        width: 100%;
+    }
+
+    ul.panel{
+        width: max-content;
+    }
+}
+
+/* Barra de navegación responsive */
+
+@media screen and (max-width: 879px) {
+    nav ul.navbar{
+        display: none;
+        position: absolute;
+        background: #444;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 880px) {
+    /* Esto es el botón de navegación */
+    nav img{
+        display: none;
+    }
+}
+/* Por debajo de 380px el titulo se sale del panel*/
+
+@media screen and (max-width: 380px) {
+    header h1{
+        font-size: 2.5rem;
+    }
+}
+
+/*Por debajo de 415px el mapa se estira en exceso*/
+@media screen and (max-width: 820px) {
+    .mapa{
+        width: 60vw;
+    }
+}
+/*Debajo de 646 el botón se rompe por ser muy grande, también debo ajustar el tamaño*/
+
+/*A partir de 650px la imagen del carrusel es demasiado grande*/
